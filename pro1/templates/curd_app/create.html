@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>create page</title>
+{% endblock %}
+{% block content %}
+<body>
+        <form method="post" class=" border border-5 col-4 m-auto mt-3 p-3 ">
+            <h3 class="text-center text-primary"> Pan Form</h3>
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Register" class="btn btn-primary">
+            <input type="reset" value="cancel" class="btn btn-warning float-end">
+        </form>
+</body>
+{% endblock %}

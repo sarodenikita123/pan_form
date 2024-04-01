@@ -1,0 +1,18 @@
+{% block title %}
+    <title>Login page</title>
+{% endblock %}
+{% block content %}
+<body>
+        <form method="post">
+            {% csrf_token %}
+            <label>Username:</label>
+            <input type="text" name="un">
+            <br><br>
+            <label>Password:</label>
+            <input type="text" name="pw">
+            <br><br>
+            <input type="submit" value="login">
+
+        </form>
+</body>
+{% endblock %}
